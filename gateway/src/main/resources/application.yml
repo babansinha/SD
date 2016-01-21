@@ -1,0 +1,16 @@
+logging:
+  level:
+    org.springframework.security: ERROR
+security:
+  sessions: ALWAYS
+zuul:
+  routes:
+    student:
+      url: http://localhost:8081
+    admin:
+      url: http://localhost:8082
+    teacher:
+      url: http://localhost:8083
+    service:
+      url: http://localhost:9005
+      

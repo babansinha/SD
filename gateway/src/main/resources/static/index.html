@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app="demoApp">
+<head>
+<link href="css/bootstrap-3.1.1.min.css" rel="stylesheet">
+<link href="css/screen.css" rel="stylesheet">
+  <!-- Angular Material CSS using GitCDN to load directly from `bower-material/master` -->
+  <link rel="stylesheet" href="css/angular-material.css">
+  
+
+
+<script src="js/framework/jquery-2.1.4.min.js"></script>
+<script src="js/framework/bootstrap-3.1.1.min.js"></script>
+<script src="js/framework/angular_1.4.5.min.js"></script>
+<script src="js/framework/angular-route.min.js"></script>
+
+
+<script src="js/directives/footerDirective.js"></script>
+<script src="js/intercepter/LoadingInterceptor.js"></script>
+<script src="js/app.js"></script>
+<script src="js/auth/auth.js"></script>
+<script src="js/login/LoginRoute.js"></script>
+<script src="js/login/LoginController.js"></script>
+<script src="js/home/HomeController.js"></script>
+<script src="js/error/ErrorRoute.js"></script>
+<script src="js/error/ErrorController.js"></script>
+
+<!-- i18n -->
+<!--script src="js/framework/angular-animate.js"></script-->
+<script src="js/framework/angular-cookies.min.js"></script>
+<script src="js/framework/angular-resource.min.js"></script>
+<script src="js/framework/i18n/angular-sanitize.js"></script>
+<script src="js/framework/i18n/angular-touch.js"></script>
+<!-- script src="js/framework/i18n/angular-translate-handler-log.js"></script-->
+<script src="js/framework/i18n/tmhDynamicLocale.min.js"></script>
+<script src="js/framework/i18n/angular-translate.js"></script>
+
+<script src="js/framework/i18n/angular-translate-storage-local.js"></script>
+<script src="js/framework/i18n/angular-translate-storage-cookie.js"></script>
+<script src="js/framework/i18n/angular-translate-loader-static-files.js"></script>
+
+
+<script src="js/services/LocaleService.js"></script>
+<script src="js/directives/LanguageSelectDirective.js"></script>
+
+</head>
+<body>
+
+<div data-ng-if="loading">
+    Loading11...
+</div>
+
+<div class="loader" ng-hide="initialized">
+		Loading...
+</div>
+
+
+	<div id="headcontainer" ng-include="'header.html'"></div>
+	<div>
+		<div class="alert alert-danger" ng-show="error">{{error}}</div>
+		<div ng-view></div>
+	</div>
+	<!--a href="#" class="scroll-top"><span class="glyphicon glyphicon-chevron-up"></span> </a-->  
+	
+	<hr style="margin-top:5%;">
+	<div>
+      <footer-directive/>
+    </div>
+
+  <!-- Angular Material Dependencies -->
+    <script src="js/framework/angular-animate.js"></script>
+    <script src="js/framework/angular-aria.js"></script>
+</body>
+</html>

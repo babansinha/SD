@@ -1,0 +1,42 @@
+<div class="container" ng-controller="homeController">
+	<div class="section section-tabs text-center">
+		Home Page
+		<h1>Greeting</h1>
+		<div ng-show="auth.authenticated">
+			<p>The ID is {{user}}</p>
+		</div>
+	</div>
+</div>
+
+<div ng-show="auth.authenticated">
+	<md-content class="md-padding">
+	<div layout="column" layout-gt-xs="row">
+		<md-card flex flex-gt-xs="30"> <a class="btn btn-primary"
+			href="/ui/"> Go To User Interface #1 </a> <md-card-content>
+		<p>Some content</p>
+		</md-card-content> </md-card>
+		<md-card flex> <a class="btn btn-primary" href="/admin/">
+			Go To Admin User Interface #2 </a> <md-card-content>
+		<p>Some content</p>
+		</md-card-content> </md-card>
+	</div>
+	</md-content>
+
+
+	<md-content class="md-padding">
+	<div layout="row" layout-xs="column">
+		<md-card flex flex-gt-xs="30"> <a class="btn btn-primary"
+			href="/teacher/"> Teacher #1 </a> <md-card-content>
+		<p>Some content</p>
+		</md-card-content> </md-card>
+
+		<md-card flex> <a class="btn btn-primary" href="/student/">
+			Student #2 </a> <md-card-content>
+		<p>Some content</p>
+		</md-card-content> </md-card>
+	</div>
+	</md-content>
+</div>
+
+
+
